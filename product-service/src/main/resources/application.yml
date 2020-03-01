@@ -1,0 +1,27 @@
+spring:
+    zipkin:
+        enabled: false
+    application:
+        name: product-service
+    datasource:
+        driver-class-name: org.h2.Driver
+        url: jdbc:h2:tcp://localhost/~/spring-training-hpe
+        username: sa
+        password:
+    jpa:
+        hibernate:
+            ddl-auto: update
+
+server:
+    port: 3002
+    
+category-service:
+    endpoint: http://localhost:3001/api/categories
+    
+security:
+    oauth2:
+        resource:
+            filter-order: 3
+            jwt:
+                key-value: -----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3resm89lIa8hW580P0da56rzs3+DO9n8o27qvoQO/0naUWs0WEX2YOy3/fFX5BLb8cuM/ds432fQ/vCZLSACI+59d1Bcv1KdmELpNtz1OD6RK888JiUtZARR3q6ctLPXAlaPmrgLvU3LehJqN9zt6xLjsbkF+z3rvBAzB/FsDfJjLe2Fn/OGlGfbcVtQeqDuS/AIv87YzPX3weTaMN5QKSfsk6zyW4uc2K8muuFj25QyEh0iGBaP0oApuqWZ26zUG+vpaJg5jXB7eCU7rJzss2A6V6RtLZ2xrUNbuKsbQhbJBUC4e2R3QApZC4JspoUtIlrBXRp+VNZDu+kupFRVGwIDAQAB-----END PUBLIC KEY-----
+    

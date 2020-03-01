@@ -1,0 +1,116 @@
+2020-02-27 00:00:41.285  INFO [category-service,,,] 48534 --- [restartedMain] co.vinod.CategoryServiceApplication      : No active profile set, falling back to default profiles: default
+2020-02-27 00:00:42.034  INFO [category-service,,,] 48534 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-27 00:00:42.055  INFO [category-service,,,] 48534 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 1 JPA repository interfaces.
+2020-02-27 00:00:42.596  INFO [category-service,,,] 48534 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b0f27f74-7825-3062-a0c1-e677064a1e94
+2020-02-27 00:00:42.677  INFO [category-service,,,] 48534 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-27 00:00:43.131  INFO [category-service,,,] 48534 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3001 (http)
+2020-02-27 00:00:43.134  INFO [category-service,,,] 48534 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-27 00:00:43.135  INFO [category-service,,,] 48534 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-27 00:00:43.160  INFO [category-service,,,] 48534 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-27 00:00:43.160  INFO [category-service,,,] 48534 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1864 ms
+2020-02-27 00:00:43.527  INFO [category-service,,,] 48534 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-02-27 00:00:43.537  INFO [category-service,,,] 48534 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-02-27 00:00:43.538  INFO [category-service,,,] 48534 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/spring-training-hpe'
+2020-02-27 00:00:44.568  INFO [category-service,,,] 48534 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-27 00:00:44.576  INFO [category-service,,,] 48534 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-27 00:00:44.756  INFO [category-service,,,] 48534 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-27 00:00:44.760  INFO [category-service,,,] 48534 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-27 00:00:44.839  INFO [category-service,,,] 48534 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-27 00:00:45.404  WARN [category-service,,,] 48534 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-27 00:00:45.743  INFO [category-service,,,] 48534 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-27 00:00:46.570  INFO [category-service,,,] 48534 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2020-02-27 00:00:46.658  INFO [category-service,,,] 48534 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3001 (http) with context path ''
+2020-02-27 00:00:46.664  INFO [category-service,,,] 48534 --- [restartedMain] co.vinod.CategoryServiceApplication      : Started CategoryServiceApplication in 5.608 seconds (JVM running for 448.204)
+2020-02-27 00:00:46.679  INFO [category-service,,,] 48534 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   TraceAutoConfiguration#noOpSpanReporter matched:
+      - @ConditionalOnBean (types: zipkin2.reporter.Reporter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TraceAutoConfiguration.TraceMetricsMicrometerConfiguration.NoReporterMetricsBeanConfiguration matched:
+      - @ConditionalOnBean (types: zipkin2.reporter.ReporterMetrics; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TraceAutoConfiguration.TraceMetricsMicrometerConfiguration.NoReporterMetricsBeanConfiguration#sleuthMicrometerReporterMetrics matched:
+      - @ConditionalOnBean (types: io.micrometer.core.instrument.MeterRegistry; SearchStrategy: all) found bean 'prometheusMeterRegistry' (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+   TraceAutoConfiguration.TraceMetricsMicrometerConfiguration.NoReporterMetricsBeanConfiguration#sleuthReporterMetrics:
+      Did not match:
+         - @ConditionalOnBean (types: io.micrometer.core.instrument.MeterRegistry; SearchStrategy: all) found beans of type 'io.micrometer.core.instrument.MeterRegistry' prometheusMeterRegistry (OnBeanCondition)
+
+   ZipkinAutoConfiguration:
+      Did not match:
+         - @ConditionalOnProperty ([spring.sleuth.enabled,spring.zipkin.enabled]) found different value in property 'spring.zipkin.enabled' (OnPropertyCondition)
+
+   ZipkinBackwardsCompatibilityAutoConfiguration:
+      Did not match:
+         - @ConditionalOnProperty ([spring.sleuth.enabled,spring.zipkin.enabled]) found different value in property 'spring.zipkin.enabled' (OnPropertyCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2020-02-27 00:04:46.833  INFO [category-service,,,] 48534 --- [http-nio-3001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-27 00:04:46.848  INFO [category-service,,,] 48534 --- [http-nio-3001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-27 00:04:47.182  INFO [category-service,,,] 48534 --- [http-nio-3001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 332 ms
+2020-02-27 00:04:47.296  INFO [category-service,024bf33e769999ed,7cf63f6d8e634ebf,true] 48534 --- [http-nio-3001-exec-1] co.vinod.rest.CategoryResource           : got request for category with id 5
+2020-02-27 00:04:49.224  INFO [category-service,e11fe11f2393b72c,d0dc832324230496,true] 48534 --- [http-nio-3001-exec-2] co.vinod.rest.CategoryResource           : got request for category with id 5
+2020-02-27 00:06:54.044  INFO [category-service,cb861b908fd4fe77,d828ead7e7042bc6,true] 48534 --- [http-nio-3001-exec-3] co.vinod.rest.CategoryResource           : got request for category with id 5
+2020-02-27 00:17:29.240  INFO [category-service,,,] 48534 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-27 00:17:29.250  INFO [category-service,,,] 48534 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-27 00:17:29.265  INFO [category-service,,,] 48534 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-02-27 00:17:29.279  INFO [category-service,,,] 48534 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-02-27 14:40:56.051  INFO [category-service,,,] 808 --- [restartedMain] co.vinod.CategoryServiceApplication      : No active profile set, falling back to default profiles: default
+2020-02-27 14:40:57.710  INFO [category-service,,,] 808 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-27 14:40:57.912  INFO [category-service,,,] 808 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165ms. Found 1 JPA repository interfaces.
+2020-02-27 14:40:59.437  INFO [category-service,,,] 808 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b0f27f74-7825-3062-a0c1-e677064a1e94
+2020-02-27 14:41:00.450  INFO [category-service,,,] 808 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-27 14:41:01.858  INFO [category-service,,,] 808 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3001 (http)
+2020-02-27 14:41:01.881  INFO [category-service,,,] 808 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-27 14:41:01.882  INFO [category-service,,,] 808 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-27 14:41:02.245  INFO [category-service,,,] 808 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-27 14:41:02.245  INFO [category-service,,,] 808 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6134 ms
+2020-02-27 14:41:03.093  INFO [category-service,,,] 808 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-27 14:41:03.363  INFO [category-service,,,] 808 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-27 14:41:03.389  INFO [category-service,,,] 808 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:tcp://localhost/~/spring-training-hpe'
+2020-02-27 14:41:06.571  INFO [category-service,,,] 808 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-27 14:41:06.914  INFO [category-service,,,] 808 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-27 14:41:07.275  INFO [category-service,,,] 808 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-27 14:41:07.684  INFO [category-service,,,] 808 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-27 14:41:09.645  INFO [category-service,,,] 808 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-27 14:41:09.667  INFO [category-service,,,] 808 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-27 14:41:09.765  INFO [category-service,,,] 808 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-27 14:41:11.257  WARN [category-service,,,] 808 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-27 14:41:11.820  INFO [category-service,,,] 808 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-27 14:41:12.929  INFO [category-service,,,] 808 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2020-02-27 14:41:13.169  INFO [category-service,,,] 808 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3001 (http) with context path ''
+2020-02-27 14:41:13.177  INFO [category-service,,,] 808 --- [restartedMain] co.vinod.CategoryServiceApplication      : Started CategoryServiceApplication in 19.018 seconds (JVM running for 20.202)
+2020-02-27 14:54:48.185  INFO [category-service,,,] 808 --- [http-nio-3001-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-27 14:54:48.205  INFO [category-service,,,] 808 --- [http-nio-3001-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-27 14:54:48.898  INFO [category-service,,,] 808 --- [http-nio-3001-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 684 ms
+2020-02-27 14:56:20.088  INFO [category-service,c62907062bc37db9,c62907062bc37db9,true] 808 --- [http-nio-3001-exec-6] co.vinod.rest.CategoryResource           : got request for category with id 2
+2020-02-27 15:08:06.935  INFO [category-service,,,] 808 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-27 15:08:06.955  INFO [category-service,,,] 808 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-27 15:08:07.020  INFO [category-service,,,] 808 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-27 15:08:07.064  INFO [category-service,,,] 808 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

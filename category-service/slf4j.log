@@ -1,0 +1,4 @@
+2020-02-27 00:00:38.545  INFO [category-service,,,] 48534 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-27 00:00:38.602  INFO [category-service,,,] 48534 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-27 00:00:39.675  INFO [category-service,,,] 48534 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-27 00:00:39.709  INFO [category-service,,,] 48534 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

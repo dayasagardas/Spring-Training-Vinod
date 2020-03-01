@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Spring MVC Demo</title>
+<link rel="stylesheet" type="text/css" href="./styles/bootstrap.min.css">
+</head>
+<body>
+	<div class="alert alert-primary">
+		<div class="container">
+			<h1>Spring MVC Demo</h1>
+		</div>
+	</div>
+	
+	<div class="container">
+		<a href="./">Home</a> |
+		<a href="./view-all-products">All products</a>
+	</div>
+	
+	<div class="container" style="min-height: 400px;">
+		
